@@ -1,7 +1,12 @@
-const http = require('http');
+const routes=require("express").Router()
 
-module.exports = (req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Cristian Nahuel Alegre Bustos!');
-};
+routes.get('/',(req,res)=>{
+res.send('Cristian Nahuel Alegre Bustos!')
+});
+
+routes.get('/test',(req,res)=>{
+  res.send('Testing Place')
+  });
+
+
+module.exports=routes
