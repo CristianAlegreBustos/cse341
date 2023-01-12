@@ -1,0 +1,13 @@
+//LOCALHOST
+###
+GET http://localhost:3000/contacts
+
+GET http://localhost:3000/contacts/63bdfd66ec5a9caef7714316
+
+GET http://localhost:3000/contacts/63bdfd66ec5a9caef7714317
+
+GET http://localhost:3000/contacts/63bdfd66ec5a9caef7714318
+
+
+
+
