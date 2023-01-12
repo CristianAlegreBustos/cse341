@@ -8,6 +8,12 @@ GET http://localhost:3000/contacts/63bdfd66ec5a9caef7714317
 
 GET http://localhost:3000/contacts/63bdfd66ec5a9caef7714318
 
+//RENDER - DEPLOY
 
+GET https://cse341-webserver.onrender.com/contacts
 
+GET https://cse341-webserver.onrender.com/contacts/63bdfd66ec5a9caef7714316
 
+GET https://cse341-webserver.onrender.com/contacts/63bdfd66ec5a9caef7714317
+
+GET https://cse341-webserver.onrender.com/contacts/63bdfd66ec5a9caef7714318
