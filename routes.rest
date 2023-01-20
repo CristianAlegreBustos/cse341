@@ -4,9 +4,9 @@ GET http://localhost:3000/contacts
 ###
 GET http://localhost:3000/contacts/63bdfd66ec5a9caef7714316
 ###
-GET http://localhost:3000/contacts/63bdfd66ec5a9caef7714317
+GET http://localhost:3000/contacts/63bdfdfeec5a9caef7714317
 ###
-GET http://localhost:3000/contacts/63bdfd66ec5a9caef7714318
+GET http://localhost:3000/contacts/63bdfe79ec5a9caef7714318
 
 //RENDER - DEPLOY
 ###
@@ -17,3 +17,30 @@ GET https://cse341-webserver.onrender.com/contacts/63bdfd66ec5a9caef7714316
 GET https://cse341-webserver.onrender.com/contacts/63bdfdfeec5a9caef7714317
 ###
 GET https://cse341-webserver.onrender.com/contacts/63bdfe79ec5a9caef7714318
+
+
+###
+
+POST  http://localhost:3000/contacts
+content-type:application/json
+
+{
+    "firstName":"Richardison",
+    "lastName":"Scoty",
+    "email":"richardyodaddasadsuknow@gmail.com",
+    "favoriteColor":"oraasasdasdnge",
+    "birthday":"11/05/1995"
+}
+###
+PUT http://localhost:3000/contacts/63bdfd66ec5a9caef7714316
+content-type:application/json
+
+{
+    "firstName": "Roberto",
+    "lastName": "Quiroz",
+    "email": "robertoquiroz@gmail.com",
+    "favoriteColor": "White",
+    "birthday": "12/13/1984"
+}
+####
+DELETE http://localhost:3000/contacts/63c7cc4e41a2a1f351ddcdde 

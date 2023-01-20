@@ -8,8 +8,7 @@ const mongoConnect = require('./db/index').mongoConnect;
 app.use(bodyParser.json());
 app.use('/',require('./routes/index'))
 
-const contactsRoutes = require('./routes/contacts');
-app.use('/contacts', contactsRoutes);
+app.use('/contacts', require('./routes/contacts'));
 
 mongoConnect(() => {
   app.listen(port,()=>{
