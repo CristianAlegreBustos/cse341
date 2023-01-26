@@ -38,7 +38,7 @@ DELETE http://localhost:3000/contacts/63c7cc4e41a2a1f351ddcdde
 ###
 GET https://cse341-webserver.onrender.com/contacts
 ###
-GET https://cse341-webserver.onrender.com/contacts/63bdfd66ec5a9caef7714316
+GET https://cse341-webserver.onrender.com/contacts/63ca7a0b9f788ebbfc377676
 ###
 GET https://cse341-webserver.onrender.com/contacts/63bdfdfeec5a9caef7714317
 ###
@@ -56,17 +56,17 @@ content-type:application/json
 }
 
 ###
-PUT https://cse341-webserver.onrender.com/contacts/63bdfd66ec5a9caef7714316
+PUT https://cse341-webserver.onrender.com/contacts/63ca7a0b9f788ebbfc377676
 content-type:application/json
 
 {
     "firstName":"Maria",
     "lastName":"godoy",
     "email":"mariadelosangeles@gmail.com",
-    "favoriteColor":"none",
+    "favoriteColor":"red",
     "birthday":"11/05/1995"
 }
 
 
 ###
-DELETE https://cse341-webserver.onrender.com/contacts/63ca7390081645f386a19685
+DELETE https://cse341-webserver.onrender.com/contacts/63ca7a0b9f788ebbfc377676

@@ -57,16 +57,16 @@ const createContact = async (req, res) => {
 const updateContact = async (req, res) => {
   const { id } = req.params;
   const db = getDb();
-  const contact={
+  const contact = {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
     email: req.body.email,
     favoriteColor: req.body.favoriteColor,
     birthday: req.body.birthday,
-}
-  // use updateOne method and $set operator
-  const response = await db.collection("contact")
-    .updateOne({ _id: new ObjectId(id) }, { $set:contact });
+  };
+  const response = await db
+    .collection("contact")
+    .updateOne({ _id: new ObjectId(id) }, { $set: contact });
   console.log(response);
   if (response.matchedCount > 0) {
     res.status(204).send();
@@ -74,18 +74,14 @@ const updateContact = async (req, res) => {
     res
       .status(500)
       .json(
-        response.error ||"Some error occurred while updating the contact."
+        response.error || "Some error occurred while updating the contact."
       );
   }
 };
 
-
-//req.params.id +req.body.firstName+req.body.lastName+req.body.email+req.body.favoriteColor+req.body.birthday
-
 const deleteContact = async (req, res) => {
   const { id } = req.params;
   const db = getDb();
-  //const userId = new ObjectId(req.params.id);
   db.collection("contact")
     .deleteOne({ _id: new ObjectId(id) }, true)
     .then((response) => {
