@@ -2,25 +2,13 @@
 ###
 GET http://localhost:3000/contacts
 ###
-GET http://localhost:3000/contacts/63bdfd66ec5a9caef7714316
+GET http://localhost:3000/contacts/63d27ea49d69c1f3522b9d7b
 ###
-GET http://localhost:3000/contacts/63bdfdfeec5a9caef7714317
+GET http://localhost:3000/contacts/63d27edd9d69c1f3522b9d7c
 ###
 GET http://localhost:3000/contacts/63bdfe79ec5a9caef7714318
 ###
 POST  http://localhost:3000/contacts
-content-type:application/json
-
-{
-    "firstName":"Richardison",
-    "lastName":"Scoty",
-    "email":"richardyodaddasadsuknow@gmail.com",
-    "favoriteColor":"oraasasdasdnge",
-    "birthday":"11/05/1995"
-}
-
-###
-PUT http://localhost:3000/contacts/63bdfd66ec5a9caef7714316
 content-type:application/json
 
 {
@@ -30,8 +18,20 @@ content-type:application/json
     "favoriteColor": "White",
     "birthday": "12/13/1984"
 }
+
 ###
-DELETE http://localhost:3000/contacts/63c7cc4e41a2a1f351ddcdde 
+PUT http://localhost:3000/contacts/63d27efd9d69c1f3522b9d7d
+content-type:application/json
+
+{
+    "firstName": "Roberto",
+    "lastName": "Quiroga",
+    "email": "robertoquiroz@gmail.com",
+    "favoriteColor": "White",
+    "birthday": "12/13/1984"
+}
+###
+DELETE http://localhost:3000/contacts/63d27f1c9d69c1f3522b9d7e
 
 
 //RENDER - DEPLOY

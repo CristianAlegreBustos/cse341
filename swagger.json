@@ -11,7 +11,7 @@
     "http"
   ],
   "paths": {
-    "/": {
+    "/contacts": {
       "get": {
         "description": "",
         "parameters": [],
@@ -62,7 +62,7 @@
         }
       }
     },
-    "/{id}": {
+    "/contacts/{id}": {
       "get": {
         "description": "",
         "parameters": [
