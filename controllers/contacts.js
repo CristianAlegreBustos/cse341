@@ -4,7 +4,7 @@ const { ObjectId } = require("mongodb");
 
 const getAll = async (req, res) => {
   const db = getDb();
-  db.collection("contact")
+  db.collection("contacts")
     .find()
     .toArray()
     .then((contacts) => {
@@ -19,7 +19,7 @@ const getAll = async (req, res) => {
 const getSingle = async (req, res) => {
   const { id } = req.params;
   const db = getDb();
-  db.collection("contact")
+  db.collection("contacts")
     .findOne({ _id: new ObjectId(id) })
     .then((contact) => {
       if (!contact) {
@@ -42,7 +42,7 @@ const createContact = async (req, res) => {
     favoriteColor: req.body.favoriteColor,
     birthday: req.body.birthday,
   };
-  const response = await db.collection("contact").insertOne(contact);
+  const response = await db.collection("contacts").insertOne(contact);
   if (response.acknowledged) {
     res.status(201).json(response);
   } else {
@@ -65,7 +65,7 @@ const updateContact = async (req, res) => {
     birthday: req.body.birthday,
   };
   const response = await db
-    .collection("contact")
+    .collection("contacts")
     .updateOne({ _id: new ObjectId(id) }, { $set: contact });
   console.log(response);
   if (response.matchedCount > 0) {
@@ -82,7 +82,7 @@ const updateContact = async (req, res) => {
 const deleteContact = async (req, res) => {
   const { id } = req.params;
   const db = getDb();
-  db.collection("contact")
+  db.collection("contacts")
     .deleteOne({ _id: new ObjectId(id) }, true)
     .then((response) => {
       console.log(response);
